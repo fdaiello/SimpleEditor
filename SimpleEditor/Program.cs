@@ -48,7 +48,7 @@ namespace SimpleEditor
                     Append(commands[1], false);
                     break;
                 case "2":
-                    Delete(Int32.Parse(commands[1]),false);
+                    Delete(int.Parse(commands[1]),false);
                     break;
             }
         }
@@ -125,7 +125,7 @@ namespace SimpleEditor
             string[] commands;
 
             // Try Parse
-            if ( Int32.TryParse(line, out int q))
+            if (int.TryParse(line, out int q))
             {
                 // Loop the numbers of input lines - commands
                 for ( int i =0; i < q; i++)
@@ -144,11 +144,11 @@ namespace SimpleEditor
                             break;
 
                         case "2":
-                            editor.Delete(Int32.Parse(commands[1]));
+                            editor.Delete(int.Parse(commands[1]));
                             break;
 
                         case "3":
-                            editor.Print(Int32.Parse(commands[1]));
+                            editor.Print(int.Parse(commands[1]));
                             break;
 
                         case "4":
